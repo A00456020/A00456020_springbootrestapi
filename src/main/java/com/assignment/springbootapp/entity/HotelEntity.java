@@ -1,16 +1,25 @@
 package com.assignment.springbootapp.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "hotels")
+@Table(name = "hotel_details")
 public class HotelEntity {
 
+    //Declaring id as primary id attribute
+    @Id
     public int id;
     public String name;
     public String website_url;
     public int total_number_of_rooms;
+    public int available_rooms;
+
+    //Default constructor is required
+    public HotelEntity(){
+
+    }
 
     public HotelEntity(int id, String name, String website_url, int total_number_of_rooms, int available_rooms) {
         this.id = id;
@@ -59,6 +68,4 @@ public class HotelEntity {
     public void setAvailable_rooms(int available_rooms) {
         this.available_rooms = available_rooms;
     }
-
-    public int available_rooms;
 }
