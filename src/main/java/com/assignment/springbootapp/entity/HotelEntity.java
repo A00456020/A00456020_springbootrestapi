@@ -1,5 +1,10 @@
 package com.assignment.springbootapp.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "hotels")
 public class HotelEntity {
 
     public int id;
