@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -16,6 +17,10 @@ public class HotelService {
 
     public List<HotelEntity> listHotels(){
         return hdi.findAll();
+    }
+
+    public Optional<HotelEntity> listHotel(Integer hotelid){
+        return hdi.findById(hotelid);
     }
 
     public String insertHotel(HotelEntity hotel){
