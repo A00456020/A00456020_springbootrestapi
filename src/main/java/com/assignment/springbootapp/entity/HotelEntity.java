@@ -1,13 +1,13 @@
 package com.assignment.springbootapp.entity;
 
-public class Hotel {
+public class HotelEntity {
 
     public int id;
     public String name;
     public String website_url;
     public int total_number_of_rooms;
 
-    public Hotel(int id, String name, String website_url, int total_number_of_rooms, int available_rooms) {
+    public HotelEntity(int id, String name, String website_url, int total_number_of_rooms, int available_rooms) {
         this.id = id;
         this.name = name;
         this.website_url = website_url;
